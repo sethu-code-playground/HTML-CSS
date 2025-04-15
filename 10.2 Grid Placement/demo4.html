@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Placement</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    .container {
+      height: 100vh;
+      display: grid;
+      gap: 3rem;
+      grid-template-columns: 1fr 1fr 1.5fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    .item {
+      font-size: 5rem;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: blueviolet;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    .cowboy {
+      background-color: #00B9FF;
+      grid-area: 1 / 1/ 2 /3;
+    }
+
+    .astronaut {
+      background-color: #03989E;
+      grid-area: 2 / 1 / 3 / 3;
+    }
+
+    .book {
+      background-color: #E5833180;
+      grid-area: 1 / 2 / 3 / 4;
+    }
+
+    /* 
+    grid-items can be overlaid upon each other in this example, the grid-item book will be positioned
+    above the other two grid-items.  */
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item cowboy">🤠</div>
+    <div class="item astronaut">👨‍🚀</div>
+    <div class="item book">📖</div>
+  </div>
+</body>
+
+</html>
+
+<!-- The element(mostly a div) enclosing a grid is called grid-container
+ The items which are inside grid-container are grid-items
+ We create items inside grid using grid rows and columns, they are collectively called as tracks
+ Each row is a row track and each column is a column track
+ Intersection of row and column is grid cell, we can create grid items spanning multiple cells
+ There are grid lines between each row and column, they can be used only for layout and can be 
+ manipulated using gap property -->

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fixed Size Grid</title>
+  <style>
+
+    .grid-container {
+      display: grid;
+      grid-template-rows: 100px 200px;
+      grid-template-columns: 400px 800px;
+      /* the above two lines can also be combined like
+      grid-template: 100px 200px / 400px 800px;  or 
+
+      grid-template-rows: 100px auto;
+      grid-template-columns: 200px auto; / 400px 800px
+      In the above example, the 1st column will take width of 200px and the second column will extend to fit the whole width of the page.
+      the 1st row will take a height of 100px and the second row will extend to fit the content inside the grid.
+      */
+    }
+
+    .grid-item {
+      font-size: 3rem;
+      background-color: darkviolet;
+      border: 5px solid goldenrod;
+      color: white;
+    }
+  </style>
+</head>
+
+<!-- Fixed grid are unresponsive and stay in fixed sizes specified.  -->
+<body>
+  <h1>Fixed Size Grid</h1>
+  <div class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+  </div>
+</body>
+
+</html>

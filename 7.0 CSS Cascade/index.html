@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Cascade</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div id="outer-box" class="box">
+    <div class="box">
+      <p>Yellow Text</p>
+      <div class="box inner-box">
+        <p class="white-text">White Text</p>
+      </div>
+    </div>
+    <div class="box">
+      <p>Yellow Text</p>
+      <div class="box inner-box">
+        <p class="white-text">White Text</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<!-- 
+  1. Position
+
+  Eg: li{
+    color:green;
+    color:blue;
+  }
+
+  both are same property referring to the sam element, so the one at the lower level will be applied, the color blue is applied
+
+  2. Specificity
+
+  Eg: <li id="id-1" class="class-1" draggable />
+  li{color:blue;}
+  .class-1{color:red;}
+  li[draggable]{color:purple;}
+  #id-1{color: orange;}
+
+  all styles apply to the same list elemnet but the order of specificity comes into play and it is as id, attribute, class and element respectively.
+
+  3. Type
+  there are three ways in applying css to the html file external stylesheet, internal stylesheet, inline styles and the order is as inline, internal and external stylesheet
+
+  4. Importance
+  Eg:
+  li{
+    color:red,
+    color:green !important
+  } 
+
+  the color green would be applied as it is marked important
+
+  Finally, thr order is importance, type, specificity, position.
+  
+ -->

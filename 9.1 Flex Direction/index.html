@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex Direction</title>
+  <!-- HINT:
+  https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors
+  https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators 
+  -->
+  <style>
+    .container {
+      color: white;
+      border: 5px solid gold;
+      display: inline-flex;
+      flex-direction: column;
+    }
+
+    .container > div{
+      flex-basis: 100px;
+    }
+
+    /*
+Select all the elements that are the direct
+children of the .container class.
+    */
+
+    .red {background-color: #eb4d4b;}
+    .orange {background-color: #f0932b;}
+    .yellow {background-color: #f6e58d;}
+    .green {background-color: #6ab04c;}
+    .blue {background-color: #4834d4;}
+    .indigo {background-color: #30336b;}
+    .purple {background-color: #be2edd;}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="red">Red</div>
+    <div class="orange">Orange</div>
+    <div class="yellow">Yellow</div>
+    <div class="green">Green</div>
+    <div class="blue">Blue</div>
+    <div class="indigo">Indigo</div>
+    <div class="purple">Purple</div>
+  </div>
+  
+</body>
+
+</html>
+
+<!-- The cross axis is perpendicular to main axis. By default, flex-direction is set to row and the main axis is horizontal. If flex-basis is set to some value, then the whole
+flex would shift along the main axis to accomodate the value set in flex-basis. -->
+
+<!-- The outer most container which encloses each element in a flexbox is called a container and each child element within the container is called flex item 
+
+1. order -> is used to specify at which position the child element/flex-item would appear. The flex-item with the highest order would be moved to the last position in the 
+flexbox. Eg: order: 0
+2.flex-wrap -> is used to move the flexitems to the next line and it is to be set in the parent/container. Eg: flex-wrap:nowrap
+3.justify-content -> is used to justify the flexitems in the flexbox and it will justify-items along the main-axis . This will behave properly when all items of the flexbox 
+occupied maximum width and there is still space leftover Eg: justify-content:flex-end
+4.align-items -> is used to align the flexitems in a flexbox and it will align-items along the cross-axis. For this property to work the height must be set 
+Eg: align-items: flex-start
+5.align-content -> is used to align the items of a flexbox but it only works when the flex-wrap property is set to wrap.
+-->
+
+<!-- order of flexsizing
+content width < width < flex-basis < min-width/max-width -->

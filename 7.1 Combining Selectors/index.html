@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Combining CSS Selectors</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<!-- Don't change any of the HTML code! -->
+
+<body>
+  <h1>To Do List</h1>
+  <h2>Monday</h2>
+  <div class="box">
+    <p class="done">Do these things today!</p>
+    <ul class="list">
+      <li>Wash Clothes</li>
+      <li class="done">Read</li>
+      <li class="done">Maths Questions</li>
+    </ul>
+  </div>
+
+  <ul>
+    <p class="done">Other items</p>
+  </ul>
+  <p>The best preparation for tomorrow is doing your best today.</p>
+
+</body>
+
+</html>
+
+
+<!-- 
+  1. Group -> applies the same style to the entire group
+    selector1, selector2{
+      //css properties
+    }
+
+    the selector can be a class selector, id selector, attribute selector etc.,
+
+  2. Child -> selcting a child of a specific selector
+    parent selector > child selector{
+      //css props
+    }
+
+    this applies to the direct child of the parent selector. the child selector should only be one level below the parent selector
+
+  3. Descendant -> selects the descendant child of the ancestor selector
+    ancestor_selector descendant_selector{
+      //css props
+    }
+
+    this applies to the descendants of any level within the parent tag.
+
+  4. Chaining -> selects a selctor which matches the chain
+    selector1selctor2selector3...{
+      //css props
+    }
+
+    there should not be any space between the selectors and always start with the element(tag name) followed by classes and id selectors
+ -->

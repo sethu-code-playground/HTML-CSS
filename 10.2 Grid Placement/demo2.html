@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Placement</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    .container {
+      height: 100vh;
+      display: grid;
+      gap: 3rem;
+      grid-template-columns: 1fr 1fr 1.5fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    .item {
+      font-size: 5rem;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: blueviolet;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    .cowboy {
+      background-color: #00B9FF;
+      grid-column: span 2;
+    }
+
+    .astronaut {
+      background-color: #03989E;
+      order: 1;
+    }
+
+    /* 
+    Each grid-item inside a grid-container has an order of 0. When a grid item has an order of 1, then 
+    that element will be the rightmost or bottomost element of the grid.
+
+    Eg:
+    When there are multiple grid-items with order as 2,5 and 8. The grid-items with order 2 will be at
+    the start of the container followed by items with order 5 and 8. The ordering direction is from 
+    left to right.
+    
+    
+    */
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item cowboy">🤠</div>
+    <div class="item astronaut">👨‍🚀</div>
+    <div class="item book">📖</div>
+  </div>
+</body>
+
+</html>

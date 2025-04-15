@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CSS Positioning Exercise</title>
+  <style>
+    /* Write your code here */
+    .red-circle{
+      background-color: red;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      position: absolute;
+      top: 150px;
+      left: 250px;
+    }
+
+    .blue-box{
+      background-color: blue;
+      height: 300px;
+      width: 500px;
+      position: relative;
+      top: 200px;
+      left: 200px;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <div class="blue-box">
+    <div class="red-circle">
+    </div>
+  </div>
+
+</body>
+
+</html>
+
+<!-- 
+  1. Static positioning -> this is the default HTML positioning. when we insert any new elements inour html page, they'll be having this positioning.
+  2. Relative positioning -> this is the position relative to the default position(original position of the element). If we make a div to be positioned relative then that
+  div would be moved to a new position relative to its original position by specifying the distances(called position which lies outside of a margin in abox model).
+  3. Absolute positioning -> this is the position relative to the nearest positioned ancestor or the top left corner of the webpage(if we scroll the webpage the element can
+  also be scrolled). if the ancestor of a particular element has a position property set then the descendant would be relative to that specific ancestor and if there are 
+  none then its positioned rellative to the top left corner of the page. absolute positioning also makes the element to be on the top of all other elements, in order to make
+  the element go behind other elements we have to set the z-index to -1
+  4. Fixed positioning -> this is the position relative to the top left corner of the browser window and even after we scroll the webpage the element stays in the same
+  position
+ -->
